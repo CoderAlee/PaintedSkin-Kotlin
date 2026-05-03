@@ -1,26 +1,29 @@
 [versions]
-agp = "8.13.0"
-kotlin = "2.0.21"
-coreKtx = "1.10.1"
-junit = "4.13.2"
-junitVersion = "1.1.5"
-espressoCore = "3.5.1"
-appcompat = "1.6.1"
-material = "1.10.0"
-activity = "1.8.0"
-constraintlayout = "2.1.4"
+#编译环境
+agp = "9.2.0"
+compileSdkVersion = "37"
+#最小版本Android 8.0 (API 26)
+minSdkVersion = "26"
+#noinspection OldTargetApi
+targetSdkVersion = "36"
+#依赖库版本
+coreKtx = "1.18.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
-androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+google-android-material = { group = "com.google.android.material", name = "material", version = "1.13.0" }
+google-jetpack-appcompat = { group = "androidx.appcompat", name = "appcompat", version = "1.7.1" }
+google-jetpack-activity = { group = "androidx.activity", name = "activity", version = "1.13.0" }
+google-jetpack-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version = "2.2.1" }
+
+#单元测试
+junit = { group = "junit", name = "junit", version = "4.13.2" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version = "1.3.0" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version = "3.7.0" }
+
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 
